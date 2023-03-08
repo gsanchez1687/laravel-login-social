@@ -4,7 +4,7 @@
 
 ```
 1. Primero tienes que crear un hosts en tu equipo para que funcione, para el caso de linux y Mac es nano /etc/hosts y añadir una linea: 127.0.0.1 laravelsocial.com
-    yo lo llame laravelsocial.com.    
+    yo lo llame laravelsocial.com.
 2.  npm install
 3.  php artisan serve --host laravelsocial.com
 4.  php artisan migrate:fresh

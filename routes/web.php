@@ -15,11 +15,6 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/google-auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });

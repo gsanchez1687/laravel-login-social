@@ -4,7 +4,19 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+        <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <a class="btn btn-primary" href="/google-auth/redirect" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login with Google</a>
+              </div>
+              <div class="col">
+               
+              </div>
+              <div class="col">
+             
+              </div>
+            </div>
+          </div>
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
