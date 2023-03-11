@@ -40,13 +40,12 @@ Route::get('/facebook-auth/redirect', function () {
 
 Route::get('/facebook-auth/callback', function () {
     $userFacebook = Socialite::driver('facebook')->stateless()->user();
-    dd($userFacebook);
     $user = User::updateOrCreate([
-        'google_id'=>$userGoogle->id
+        'facebook_id'=>$userFacebook->id
     ],
     [
-        'name'=>$userGoogle->name,
-        'email'=>$userGoogle->email,
+        'name'=>$userFacebook->name,
+        'email'=>$userFacebook->email,
     ]);
     Auth::login($user);
     return redirect('/dashboard');
