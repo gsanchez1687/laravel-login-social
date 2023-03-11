@@ -1,5 +1,5 @@
 ## Proyecto En Laravel 10 para iniciar sesion con Google, Facebook, Twitter, Github
-
+### Con el paquete de Laravel Breeze
 ![Logo](https://raw.githubusercontent.com/gsanchez1687/laravel-login-social/main/resources/img/logo.png)
 
 ```

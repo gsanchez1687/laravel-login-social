@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/google-auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
+
  
 Route::get('/google-auth/callback', function () {
     $userGoogle = Socialite::driver('google')->stateless()->user();
@@ -31,6 +32,28 @@ Route::get('/google-auth/callback', function () {
     Auth::login($user);
     return redirect('/dashboard');
 });
+
+
+Route::get('/facebook-auth/redirect', function () {
+    return Socialite::driver('facebook')->redirect();
+});
+
+Route::get('/facebook-auth/callback', function () {
+    $userFacebook = Socialite::driver('facebook')->stateless()->user();
+    dd($userFacebook);
+    $user = User::updateOrCreate([
+        'google_id'=>$userGoogle->id
+    ],
+    [
+        'name'=>$userGoogle->name,
+        'email'=>$userGoogle->email,
+    ]);
+    Auth::login($user);
+    return redirect('/dashboard');
+});
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
