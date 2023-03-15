@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//Estableciendo la vista del login por default
+Route::get('/', function () {
+    return view('auth/login');
+});
+
 Route::get('/google-auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });

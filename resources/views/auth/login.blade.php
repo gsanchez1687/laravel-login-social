@@ -2,24 +2,20 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <div class="card">
+        <div class="card-body">
+            <div class="d-grid gap-2">
+                <a class="btn btn-block btn-outline-primary" href="/google-auth/redirect"><i style="float: left;" class="bi bi-google"></i> Login with Google</a>
+                <a class="btn btn-outline-primary" href="/facebook-auth/redirect"><i style="float: left;" class="bi bi-facebook"></i> Login with Facebook</a>
+              </div>
+        </div>
+      </div>
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
-        <div class="container text-center">
-            <div class="row">
-              <div class="col">
-                <a class="btn btn-primary" href="/google-auth/redirect" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login with Google</a>
-                <a class="btn btn-primary" href="/facebook-auth/redirect" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Login with Facebook</a>
-              </div>
-              <div class="col">
-               
-              </div>
-              <div class="col">
-             
-              </div>
-            </div>
-          </div>
+        
         <!-- Email Address -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
