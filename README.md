@@ -1,6 +1,7 @@
 ## Proyecto En Laravel 10 para iniciar sesion con Google, Facebook, Twitter, Github
 ### Con el paquete de Laravel Breeze
 ![Logo](https://raw.githubusercontent.com/gsanchez1687/laravel-login-social/main/resources/img/logo.png)
+![Logo](https://raw.githubusercontent.com/gsanchez1687/laravel-login-social/main/public/assets/Captura.png)
 
 ```
 1. Primero tienes que crear un hosts en tu equipo para que funcione, para el caso de linux y Mac es nano /etc/hosts y añadir una linea: 127.0.0.1 laravelsocial.com
