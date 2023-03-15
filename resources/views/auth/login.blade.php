@@ -7,6 +7,7 @@
             <div class="d-grid gap-2">
                 <a class="btn btn-block btn-outline-primary" href="/google-auth/redirect"><i style="float: left;" class="bi bi-google"></i> Login with Google</a>
                 <a class="btn btn-outline-primary" href="/facebook-auth/redirect"><i style="float: left;" class="bi bi-facebook"></i> Login with Facebook</a>
+                <a class="btn btn-outline-danger" href="/instagram-auth/redirect"><i style="float: left;" class="bi bi-instagram"></i> Login with Intagram</a>
               </div>
         </div>
       </div>

@@ -40,5 +40,10 @@ return [
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
         'redirect' => 'https://laravelsocial.com:8000/facebook-auth/callback',
     ],
-
+    'instagrambasic' => [    
+        'client_id' => env('INSTAGRAMBASIC_CLIENT_ID'),  
+        'client_secret' => env('INSTAGRAMBASIC_CLIENT_SECRET'),  
+        'redirect' => env('INSTAGRAMBASIC_REDIRECT_URI') 
+      ],
+      
 ];

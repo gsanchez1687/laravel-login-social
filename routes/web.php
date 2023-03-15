@@ -24,7 +24,6 @@ Route::get('/', function () {
 Route::get('/google-auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
-
  
 Route::get('/google-auth/callback', function () {
     $userGoogle = Socialite::driver('google')->stateless()->user();
@@ -57,6 +56,16 @@ Route::get('/facebook-auth/callback', function () {
     return redirect('/dashboard');
 });
 
+
+Route::get('/instagram-auth/redirect', function () {
+    return Socialite::driver('instagrambasic')->redirect();
+   
+});
+
+Route::get('/instagram-auth/callback', function () {
+    $userInstagram = Socialite::driver('instagrambasic')->stateless()->user();
+   
+});
 
 
 
